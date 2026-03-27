@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Strona o github blow gała</title>
+</head>
+<body>
+  <h1>Siema githubiści klaskajmy blow</h1>
+  <p>Blow blow blow!</p>
+</body>
+</html>
