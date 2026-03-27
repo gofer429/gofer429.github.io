@@ -1,18 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-  <title>Strona o github blow gała</title>
+<meta charset="UTF-8">
+<title>Blow github</title>
+
+<style>
+body {
+  background: #e0e0e0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* KARTA */
+.card {
+  padding: 40px;
+  border-radius: 20px;
+  background: #e0e0e0;
+  box-shadow: 
+    10px 10px 20px #bebebe,
+    -10px -10px 20px #ffffff;
+  text-align: center;
+}
+
+/* INPUT */
+input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 
+    inset 5px 5px 10px #bebebe,
+    inset -5px -5px 10px #ffffff;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #e0e0e0;
+  cursor: pointer;
+  box-shadow: 
+    5px 5px 10px #bebebe,
+    -5px -5px 10px #ffffff;
+  transition: 0.2s;
+}
+
+button:active {
+  box-shadow: 
+    inset 5px 5px 10px #bebebe,
+    inset -5px -5px 10px #ffffff;
+}
+</style>
+
 </head>
 <body>
-  <h1>Siema githubiści klaskajmy blow</h1>
-  <p>Blow blow blow!</p>
-  <button onclick="zapytaj()">Kliknij mnie</button>
+
+<div class="card">
+  <h2>Bezrobocie rim na jeźdźca</h2>
+  <input type="text" id="name" placeholder="Twoje imię">
+  <br>
+  <button onclick="pokaz()">Darmowe nesquiki</button>
+</div>
 
 <script>
-function zapytaj() {
-  let imie = prompt("Lubisz na jeźdźca?");
-  alert("Szczypie pała " + imie);
+function pokaz() {
+  let imie = document.getElementById("name").value;
+  alert("Szczypie pała" + imie);
 }
 </script>
+
 </body>
 </html>
