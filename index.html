@@ -2,11 +2,11 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Blow github</title>
+<title>Blow github git</title>
 
 <style>
 body {
-  background: #e0e0e0;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -17,45 +17,89 @@ body {
 /* KARTA */
 .card {
   padding: 40px;
-  border-radius: 20px;
+  border-radius: 25px;
   background: #e0e0e0;
   box-shadow: 
-    10px 10px 20px #bebebe,
-    -10px -10px 20px #ffffff;
+    15px 15px 30px #bebebe,
+    -15px -15px 30px #ffffff;
   text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* ANIMACJA WEJŚCIA */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* INPUT */
 input {
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 12px;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #e0e0e0;
   box-shadow: 
-    inset 5px 5px 10px #bebebe,
-    inset -5px -5px 10px #ffffff;
+    inset 6px 6px 12px #bebebe,
+    inset -6px -6px 12px #ffffff;
+  transition: 0.3s;
+}
+
+input:focus {
+  transform: scale(1.05);
 }
 
 /* BUTTON */
 button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
-  border-radius: 10px;
-  background: #e0e0e0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  font-weight: bold;
   cursor: pointer;
   box-shadow: 
     5px 5px 10px #bebebe,
     -5px -5px 10px #ffffff;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
+/* HOVER */
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 118, 140, 0.7);
+}
+
+/* KLIK */
 button:active {
-  box-shadow: 
-    inset 5px 5px 10px #bebebe,
-    inset -5px -5px 10px #ffffff;
+  transform: scale(0.95);
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+}
+
+/* IKONKA */
+.icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+/* ANIMACJA IKONKI */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h2 {
+  margin-bottom: 10px;
 }
 </style>
 
@@ -63,16 +107,22 @@ button:active {
 <body>
 
 <div class="card">
-  <h2>Bezrobocie rim na jeźdźca</h2>
+  <div class="icon">🚀</div>
+  <h2></h2>
   <input type="text" id="name" placeholder="Na kowbojkę foot">
   <br>
-  <button onclick="pokaz()">Darmowe nesquiki</button>
+  <button onclick="pokaz()">Darmowe nesuiki</button>
 </div>
 
 <script>
 function pokaz() {
   let imie = document.getElementById("name").value;
-  alert("Szczypie pała" + imie);
+  
+  if(imie === "") {
+    alert("Umyj się nadgarstkiem 😅");
+  } else {
+    alert("Szczypie pała " + imie + " 🔥");
+  }
 }
 </script>
 
