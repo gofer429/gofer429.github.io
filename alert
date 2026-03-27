@@ -1,0 +1,8 @@
+<button onclick="zapytaj()">Kliknij mnie</button>
+
+<script>
+function zapytaj() {
+  let bro = prompt("Lubisz na jeźdźca??");
+  alert("Siema " + imie);
+}
+</script>
